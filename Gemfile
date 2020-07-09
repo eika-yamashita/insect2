@@ -7,7 +7,6 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2', '0.5.3'
-gem 'sqlite3', group: :development
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -65,3 +64,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'compass-rails', '3.1.0'
+gem 'sprockets', '3.7.2'
+gem 'haml-rails'
+gem 'font-awesome-sass'
+gem 'devise'
+gem 'ransack'
+gem 'geocoder'
