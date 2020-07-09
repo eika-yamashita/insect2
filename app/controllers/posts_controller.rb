@@ -32,7 +32,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:image, :name, :text, :category)
+    params.require(:post).permit(:image, :name, :text)
   end
 
   def search_params

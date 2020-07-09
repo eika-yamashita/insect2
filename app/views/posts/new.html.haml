@@ -1,0 +1,59 @@
+.post-content
+  .post-content-send
+    = form_with(model: @posts, local: true) do |form|
+  
+      = form.text_field :image, placeholder:"Image Url"
+      = form.select :category, [ ["分類を選択",""],["鞘翅目","1"],["鱗翅目","2"],["膜翅目","3"],["蜻蛉目","4"],["半翅目","5"],["直翅目","6"],["双翅目","7"],["螳螂目","8"]]
+      = form.text_field :name, placeholder:"種名"
+      = form.text_field :text, placeholder:"採集地" 
+      = form.submit "SEND" , class: "submit"
+      
+  .map
+    .map-form
+      %p
+        %form{:onsubmit => "return false;"}
+        %input#address{:type => "text", :value => "株式会社div"}/
+        %button#map_button{:type => "button", :value => "検索"} 検索
+      
+    #map
+    %p
+      緯度
+      %input#lat{:type => "text", :value => ""}/
+      
+      経度
+      %input#lng{:type => "text", :value => ""}/
+    :javascript
+      
+      let map
+      function initMap() {    
+        var geocoder = new google.maps.Geocoder()
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 35.662699, lng:139.700557},
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        var marker = new google.maps.Marker({
+          position:  {lat: 35.662699, lng:139.700557},
+          map: map
+        });
+      }
+      let geocoder
+      function codeAddress(){
+        var geocoder = new google.maps.Geocoder()
+        var inputAddress = document.getElementById('address').value;
+          geocoder.geocode( { 'address': inputAddress}, function(results, status) {
+            if (status == 'OK') {
+              map.setCenter(results[0].geometry.location);
+              var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+              });
+            } else {
+              alert('該当する結果がありませんでした：' + status);
+            }
+          });   
+        
+      }
+      window.onload = function(){
+        initMap(); 
+      };

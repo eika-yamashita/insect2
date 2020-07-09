@@ -1,0 +1,12 @@
+.showPage
+  .showPost
+    .showPost__image
+      = image_tag @post.image
+    .showPost__info
+      .showPost__info__name
+        = @post.name
+      .showPost__info__text
+        = @post.text
+    .showPost__destroy
+      =link_to post_path(@post), method: :delete do
+        削除
