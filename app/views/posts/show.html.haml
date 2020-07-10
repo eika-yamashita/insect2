@@ -1,7 +1,7 @@
 .showPage
   .showPost
     .showPost__image
-      = image_tag @post.image
+      = image_tag @post.image.url
     .showPost__info
       .showPost__info__name
         = @post.name

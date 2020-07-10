@@ -7,9 +7,10 @@
   .posts
     - @posts.each do |post|
       .post
-        =link_to post do
-          =image_tag post.image
-        .post-info
+        .image
+          =link_to post do
+            =image_tag post.image.url if post.image.present?
+        .info 
           #{post.name}
           %br
           #{post.text} 
