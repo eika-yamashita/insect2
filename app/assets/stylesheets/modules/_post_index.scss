@@ -58,8 +58,6 @@
     font-family:inherit;
     font-size:inherit;
     font-weight:inherit;
-    // width: 20%;
-    // margin: 10px;
     padding: 12px 25px;
     border-radius: 20px;
     border-color: white;
@@ -99,14 +97,10 @@
     height: auto;
     width: auto;
     background-color: #F5F5F3;
-    // padding-top: 30px;
-    // padding-left: 50px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-  
-    
-  
+
     .post{
       margin: 20px;
       img {
@@ -117,7 +111,7 @@
         border-radius: 5px;
       }
   
-      .post-info {
+      .info {
         width: 200px;
         height: auto;
         background-color: white;
