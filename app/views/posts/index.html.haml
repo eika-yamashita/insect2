@@ -11,8 +11,9 @@
         .image
           =link_to post do
             =image_tag post.image.url if post.image.present?
-        .info 
-          #{post.name}
-          %br
-          #{post.text} 
+        =link_to post do
+          .info 
+            #{post.name}
+            %br
+            #{post.text} 
       
