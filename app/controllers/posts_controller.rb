@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @q = Post.ransack(params[:posts])
@@ -37,6 +38,10 @@ class PostsController < ApplicationController
 
   def search_params
     params.require(:q).permit(:name_cont, :category_eq)
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
 end
