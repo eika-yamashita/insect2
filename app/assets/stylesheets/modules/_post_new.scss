@@ -1,8 +1,6 @@
 .post-content{
   height: 100vh;
-  background-color: #F5F5F3;
   .post-content-send{
-    background-color: #F5F5F3;
     height: auto;
     width: 100vw;
     padding-top: 20px;
@@ -36,13 +34,12 @@
         border: 0;
       }     
       input[type="submit"] {
-        background-color: rgb(35, 218, 19);
+        background-color:black;
         color: white;
         border-radius: 20px;
         padding: 15px;
         border: 0;
         width: 40%;
-        box-shadow: 0 0 10px rgba(black,0.2);
         margin-top: 25px;
       }
     }
