@@ -14,46 +14,26 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 30px;
-  // border-bottom: 1px solid #D8D8D8;
-  
-  
-  
+  padding: 0 100px;
+  min-width: 640px;
   .title{
-    padding: 30px 0px 0px 0px;
-    padding-left: 50px;
     font-weight: bold;
     font-style: italic;
     font-size: 2.2em;
-    
     a {
       text-decoration: none;
       color:white;
     }
   }
-
-  .user{
-    display: flex;
-    color: grey;
-    padding-right: 50px;
-    padding-top: 20px;
-    a{
-      color: white;
-    }
-    .user-name{
-      padding: 10px;
-      margin-right: 30px;
-      color:grey;
-    }
-
-    .send{
-      padding: 10px;
-      border: 2px solid rgb(29, 218, 29);
-      border-radius: 5px;
-      font-weight: bold;
-      .post-link{
-        text-decoration: none;
-        color: rgb(29, 218, 29);
+  .contents{
+    .content{
+      
+      a{
+        height: 10rem;
+        color: white;
+        margin-left: 20px;
+        letter-spacing: 1px;
+        vertical-align: middle;
       }
     }
   }

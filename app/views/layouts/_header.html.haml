@@ -1,14 +1,13 @@
 .head
   .title
     = link_to'Insectagram', root_path
-  .user
-    .user-name
-      - if user_signed_in?
-        .user_logout
-          = link_to "LOG OUT",destroy_user_session_path, method: :delete, class: 'log-out'
-          = link_to new_post_path do
-            =image_tag 'pict/icon_camera.png',size:"30x30",alt:"icon_camera",class:"exhibitionBtn__icon"
-      - else
-        .user_login
-          = link_to "ログイン", new_user_session_path, class: 'log-in'
-          = link_to "新規登録", new_user_registration_path, class: 'sign-up'
+  .contents
+    - if user_signed_in?
+      .content
+        = link_to "LOG OUT",destroy_user_session_path, method: :delete, class: 'log-out'
+        = link_to new_post_path do
+          =image_tag 'pict/icon_camera.png',size:"30x30",alt:"icon_camera",class:"exhibitionBtn__icon"
+    - else
+      .content
+        = link_to "LOG IN", new_user_session_path, class: 'log-in'
+        = link_to "SIGN UP", new_user_registration_path, class: 'sign-up'
