@@ -3,19 +3,27 @@
   background-size: cover;
   width: 100vw;
   background-repeat: no-repeat;
-  // background-attachment: scroll;
   background-position: center center;
   height:650px;
+  display: table;
+  .text{
+    font-size: 75px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+  }
 }
 
 .PostPage{
-  height: 100vh;
-  // background-color: black;
+  height: auto;
+  min-height: 100vh;
   
   .posts{
     height: auto;
     width: auto;
-    // background-color: black;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -26,22 +34,35 @@
         width: 200px;
         height: 200px;
         object-fit: cover;
-        // box-shadow: 0 0 10px rgba(black,0.2);
-        // border-radius: 5px;
       }
   
       .info {
         width: 200px;
         height: auto;
-        // background-color: black;
         border: 1px solid black;
-        // border-radius: 5px;
         padding: 7px;
         margin: 0px;
         color:black;
-        // box-shadow: 0 0 10px rgba(black,0.2);
         font-style: italic;
       }
     }
+  }
+}
+.bottom{
+  background-image: image-url("pict/forest4.jpg");
+  background-size: cover;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height:400px;
+  display: table;
+  .text{
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
   }
 }

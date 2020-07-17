@@ -4,6 +4,10 @@
 -#     = f.collection_select :ordo_eq, @ordos, :id, :name, :include_blank => '分類を指定'
 -#     = f.submit 
 .top
+  .text
+    LET'S POST YOUR
+    %br
+    "COLLECTED INSECT"!
 .PostPage
   .posts
     - @posts.each do |post|
@@ -17,3 +21,7 @@
             %br
             #{post.text} 
 .bottom
+  .text
+    LET'S POST YOUR
+    %br
+    "COLLECTED INSECT"!
